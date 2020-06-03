@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+function whichElement(e){
+	var targ;
+	if (!e){
+		var e=window.event;
+	}if (e.target){
+		targ=e.target;
+	}else if (e.srcElement){
+		targ=e.srcElement;
+	}
+	var tname;
+	tname=targ.tagName;
+	alert("你点击了一个" + tname + " 元素。");
+}
+</script>
+</head>
+
+<body onmousedown="whichElement(event)">
+<p>单击文档中的某个地方。一个警告框将提醒你点击的元素的标签名称。</p>
+<h3>这是一个标题</h3>
+<p>这是一个段落</p>
+<p>
+  <input type="text" name="1" id="1" value="提交" />
+</p>
+
+</body>
+</html>
