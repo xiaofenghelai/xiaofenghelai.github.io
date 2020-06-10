@@ -4,36 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-  $("h1,h2,p").click(function(){
-    $(this).addClass("red");
-  });
-   $("div").click(function(){
-    $(this).addClass("important");
-  });
+$(document).ready(function(){ 
+$("#hide").click(function(){ 
+$("p").hide(1000,"linear");
+ });
+$("#show").click(function(){ 
+$("p").show(1000); 
+ });
 });
-</script>
-<style type="text/css">
-.important
-{
-	font-weight: 400;
-	font-size: xx-large;
-}
-.red
-{
-	color:red;
-}
-</style>
+</script> 
+<title>隐藏与显示</title>
 </head>
+
 <body>
-
-<h1>点击网页元素，将为它增加格式</h1>
-<h2>增加css类</h2>
-<p>这是一个段落</p>
-<p>这是另外一个段落。</p>
-<div>这是一些重要的文本!</div>
-<br>
-
-
+ <h2>This is a heading</h2>
+  <p>This is a paragraph.</p> 
+<p>This is another paragraph.</p>
+<button id="hide"type="button">hide</button>
+<button id="show" type="button">show</button>
 </body>
 </html>
